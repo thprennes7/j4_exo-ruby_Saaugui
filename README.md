@@ -11,7 +11,7 @@ On a séparé notre code en 3 méthodes:
 - La deuxième pour la fonction
 - La troisième pour appeler et appliquer les deux méthodes
 
-### 01_pyralids.rb
+### 01_pyramids.rb
 
 On a séparé notre code en 4 méthodes
 
