@@ -11,9 +11,10 @@ def dice
   return dice_num
 end
 
-#def player_floor
- 
-#end
+def game_turn
+    print "Appuyez sur Entrer"
+    STDIN.gets
+end
 
 def method_name
 
@@ -45,15 +46,31 @@ def movement(dice_check, player_floor)
   
 end
 
+def floor_check(player_floor)
+    case player_floor
+        when player_floor < 1  
+            player_floor = 0
+            return player_floor
+    else 
+        return player_floor
+    end
+end
+
 
 def perform
+   puts "Bienvenue dans Super Super Mario" 
+    puts" Vous pouvez lancer le dés pour gravir les 10 étages de la mort qui se trouvent devant vous !"
     player_floor = 0
-    while player_floor<10
+    while player_floor < 10
+        
+        game_turn
         dice_num = dice
         result = dice_check(dice_num)
         player_floor = movement(result, player_floor)
+        player_floor = floor_check(player_floor)
+        puts "Vous êtes à l'étage #{player_floor}"
     end
-        
+    puts "Un vrai champion ! Tu as gagné, tu es au dixième étage" 
 end
 
 perform
