@@ -57,20 +57,44 @@ def floor_check(player_floor)
 end
 
 
-def perform
+def mario
    puts "Bienvenue dans Super Super Mario" 
     puts" Vous pouvez lancer le dés pour gravir les 10 étages de la mort qui se trouvent devant vous !"
     player_floor = 0
-    while player_floor < 10
-        
-        game_turn
+    turn = 0
+    while player_floor < 10 
+        # Alternative game
+        # game_turn 
         dice_num = dice
         result = dice_check(dice_num)
         player_floor = movement(result, player_floor)
         player_floor = floor_check(player_floor)
         puts "Vous êtes à l'étage #{player_floor}"
+        turn += 1
     end
+    return turn
     puts "Un vrai champion ! Tu as gagné, tu es au dixième étage" 
 end
 
-perform
+def num_turns(i)
+  
+def sum(games)
+  turn = 0
+  total_turn = 0
+  games.times do 
+    turn = mario
+    total_turn += turn
+    return total_turn
+  end
+end
+
+def average_finish_time(sum, games)
+  average = sum / games
+end
+
+def perform
+  games = 100 
+  average_finish_time(sum(games), games)
+end
+
+  
