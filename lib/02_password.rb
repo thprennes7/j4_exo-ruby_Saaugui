@@ -5,32 +5,36 @@ def signup
   return user_password
 end
 
-def login (welcome_screen, password_check)
-  puts "Rentrez votre mot de passe"
+def login 
+  puts "Rentrez votre mot de passe "
   print "> "
   password = gets.chomp
 
-  while password_check
-    
-  end
-
+  return password
 end
 
-def password_check(user_password)
+def password_check(user_password, password)
+    
   case password
-  when user_password
-    return false
+   when user_password 
+      return true
   else
-    return true
+    return false
   end
 end
 
 def welcome_screen
-  print"Bienvenue sur le site de la NSA ! Les codes nucléaires de la mort fatale sont les suivants : 0000"
+  puts "Bienvenue sur le site de la NSA ! Les codes nucléaires de la mort fatale sont les suivants : 0000 "
 end
 
 def perform
-  login(user_password, welcome_screen)
+    user_password = signup
+    password = login
+    while user_password != password
+        puts " ceci n'est pas le bon mot de passe"
+        password = login
+    end
+    welcome_screen
 end
 
 perform
