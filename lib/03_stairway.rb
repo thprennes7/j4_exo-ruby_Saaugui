@@ -6,14 +6,14 @@
 
 def dice
   puts "Vous lancez le dés"
-  dice_num = rand(6)
+  dice_num = rand(1..6)
   puts "Vous avez fait un #{dice_num}"
   return dice_num
 end
 
-def player_floor
-
-end
+#def player_floor
+ 
+#end
 
 def method_name
 
@@ -42,16 +42,18 @@ def movement(dice_check, player_floor)
   when 2
     return player_floor
   end
-  return i
+  
 end
 
-def end_check (player_floor)
-  case player_floor
-    
-end
 
 def perform
-
+    player_floor = 0
+    while player_floor<10
+        dice_num = dice
+        result = dice_check(dice_num)
+        player_floor = movement(result, player_floor)
+    end
+        
 end
 
 perform
