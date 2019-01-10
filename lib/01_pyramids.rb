@@ -9,9 +9,9 @@ end
 
 def full_pyramid (user_num_floor = 0, i = 1, j = 0)
 
-    while i <= (user_num_floor / 2 + 1)
+    while i <= (user_num_floor / 2)
 
-        print " " * (user_num_floor - i - 2)
+        print " " * (user_num_floor / 2 - i + 1)
         puts "#" * (i + j)
         i += 1
         j += 1
@@ -19,12 +19,12 @@ def full_pyramid (user_num_floor = 0, i = 1, j = 0)
     end
 end
 
-def wtf_pyramid (user_num_floor, i = 1, j = 0)
+def wtf_pyramid (user_num_floor, i = 0, j = 0)
     while i <= (user_num_floor / 2)
-print " " * ((user_num_floor / 2) + i)
-puts "#" * (i - j)
+print " " * i
+puts "#" * (user_num_floor - i + j)
 i += 1
-j += 1
+j -= 1
     end
 end
 
