@@ -1,9 +1,3 @@
-# def start_game
-#   i = 0
-#   puts "Bienvenue dans Super Super Mario" "Vous pouvez lancer le dés pour gravir les 10 étages de la mort qui se trouvent devant vous !"
-#   return i
-# end
-
 def dice
   puts "Vous lancez le dés"
   dice_num = rand(1..6)
@@ -14,10 +8,6 @@ end
 def game_turn
     print "Appuyez sur Entrer"
     STDIN.gets
-end
-
-def method_name
-
 end
 
 def dice_check (dice)
