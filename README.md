@@ -32,8 +32,7 @@ On a séparé notre code en 5 méthodes:
 
 
 ### 03_stairway.rb
-       
-                    Construction
+
 
 On a développer le jeu en le découpant en plusieur bloc de méthodes, pour ensuite construire notre programme de stat par dessus le jeu
 
@@ -44,4 +43,7 @@ Pour cela on a créé 9 méthodes:
 - Une méthode qui récupère le resultat du dé et qui tri en attribuant une valeur
 - Récupère la valeur attribué et modifie ou non l'etage du perso
 - Vérifie que le perso ne se trouve pas dans un étage négatif
--
+- L'étage et le nombre de tour sont inialisé, on stock le nombre de tours dans un itérateur, tant que le perso n'a pas atteint le 10èmes étages le jeu relance un tour. Quand le joueur atteint le 10èmes étages la boucle s'arrête. snif snif
+- On initialise le nombre de tour et le total des tours additionné selon le nombre de partie. A travers une boucle on demande au jeu de s'exécuté x fois, on stock le total de nombre de tour dans un itirateur
+- On calcul la moyenne de tour des x parties
+- On défini le nombre de partie. On récupère les méthodes pour exécuté le programme et afficher la moyenne de tour par partie.
