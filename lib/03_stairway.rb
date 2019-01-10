@@ -75,8 +75,6 @@ def mario
     return turn
     puts "Un vrai champion ! Tu as gagné, tu es au dixième étage" 
 end
-
-def num_turns(i)
   
 def sum(games)
   turn = 0
@@ -84,17 +82,20 @@ def sum(games)
   games.times do 
     turn = mario
     total_turn += turn
-    return total_turn
+    
   end
+  return total_turn
 end
 
 def average_finish_time(sum, games)
   average = sum / games
+  return average
 end
 
 def perform
   games = 100 
-  average_finish_time(sum(games), games)
+  average = average_finish_time(sum(games), games)
+  puts "Sur #{games} parties, la moyenne de tours est de #{average}." 
 end
 
-  
+perform
